@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1a202c"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".SegmentFragment">
+
+    <LinearLayout
+        android:id="@+id/title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/segment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_segment"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_all_segment"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/all_segment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_segment"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/white" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#2d3748"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/question"
+                    android:textColor="#98a6b8"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chip_group"
+                    app:singleSelection="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipA"
+                        android:checkable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        app:chipCornerRadius="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/choice"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipB"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:checkable="true"
+                        app:chipCornerRadius="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/choice"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipC"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:checkable="true"
+                        app:chipCornerRadius="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/choice"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipD"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:checkable="true"
+                        app:chipCornerRadius="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/choice"/>
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <LinearLayout
+                    android:id="@+id/btn_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_prev"
+                        android:layout_marginRight="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/previous" />
+
+                    <Button
+                        android:id="@+id/btn_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/next" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</LinearLayout>
+

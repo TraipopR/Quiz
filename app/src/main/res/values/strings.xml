@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="question">Question </string>
+    <string name="default_segment">1</string>
+    <string name="default_all_segment">/</string>
+    <string name="choice">Choice</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="your_score_is">Your Score is</string>
+</resources>
