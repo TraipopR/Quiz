@@ -22,7 +22,9 @@ class ResultActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-        binding.toolbar.title = "Your score is ${quizData.question.map { if (it.answer == it.correct) 1 else 0  }.sum()}/${quizData.question.count()}"
+        val segmentCount = intent.getIntExtra(RESULT_EXTRA, 0)
+
+        binding.toolbar.title = "Your score is ${quizData.question.map { if (it.answer == it.correct) 1 else 0  }.sum()}/$segmentCount"
         binding.toolbar.setTitleTextColor(Color.WHITE);
 
         val resultActivity = this
@@ -68,7 +70,7 @@ class QuestionViewHolder(
                 color = "#81e6d9"
             }
 
-            listOf(chipA, chipB, chipC, chipD).forEachIndexed { index, it ->
+            listOf(chipA, chipB, chipC, chipD).forEachIndexed { _, it ->
                 it.chipBackgroundColor = setChipBackgroundColor(
                     checkedColor = Color.parseColor(color),
                     unCheckedColor = Color.parseColor("#FFFFFF")

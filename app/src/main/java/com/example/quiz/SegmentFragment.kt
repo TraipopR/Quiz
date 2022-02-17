@@ -17,7 +17,7 @@ import com.example.quiz.databinding.FragmentSegmentBinding
 import com.google.android.material.chip.Chip
 
 private const val ARG_SEGMENT = "segment"
-private const val RESULT_EXTRA = "resultExtra"
+const val RESULT_EXTRA = "resultExtra"
 
 class SegmentFragment : Fragment() {
     private var segment: Int? = null
