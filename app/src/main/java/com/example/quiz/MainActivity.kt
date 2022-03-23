@@ -36,23 +36,47 @@ class MainActivity : AppCompatActivity() {
 }
 
 val quizData = Quiz(
-    "อะไรเอ๋ย!!!",
+    "Final",
     listOf(
         Question(
-            "ไก่กับไข่อันไหนเกิดก่อนกัน",
-            EChoice.C,
-            Choice("ไก่เกิดก่อน"),
-            Choice("ไข่เกิดก่อน"),
-            Choice("อันไหนจะเกิดก่อนก็กินได้เหมือนกัน"),
-            Choice("เกิดพร้อมกัน")
+            "OSI Layer มีทั้งหมดกี่ Layer",
+            listOf(EChoice.C),
+            Choice("5 Layer"),
+            Choice("6 Layer"),
+            Choice("7 Layer"),
+            Choice("8 Layer")
         ),
         Question(
-            "ไก่กับไข่อันไหนเกิดทีหลัง",
-            EChoice.C,
-            Choice("ไก่เกิดก่อน"),
-            Choice("ไข่เกิดก่อน"),
-            Choice("อันไหนจะเกิดก่อนก็กินได้เหมือนกัน"),
-            Choice("เกิดพร้อมกัน")
+            "จงเรียงลำดับขนาดของเครือข่าย",
+            listOf(EChoice.A, EChoice.C),
+            Choice("LAN MAN WAN"),
+            Choice("LAN WAN MAN"),
+            Choice("WAN MAN LAN"),
+            Choice("WAN LAN MAN")
+        ),
+        Question(
+            "Address ของ IPv4 กับ IPv6 แตกต่างกันเท่าไหร่",
+            listOf(EChoice.D),
+            Choice("1 เท่า"),
+            Choice("2 เท่า"),
+            Choice("3 เท่า"),
+            Choice("4 เท่า")
+        ),
+        Question(
+            "1 + 2 x 3 - 4 ÷ 4 = ?",
+            listOf(EChoice.C),
+            Choice("4"),
+            Choice("5"),
+            Choice("6"),
+            Choice("7")
+        ),
+        Question(
+            "IP Address 192.168.1.21/24 จัดเป็น IP คลาสใด",
+            listOf(EChoice.C),
+            Choice("Class A"),
+            Choice("Class B"),
+            Choice("Class C"),
+            Choice("Class D")
         ),
     )
 )
@@ -105,7 +129,7 @@ data class Quiz(
 
 data class Question(
     val question: String,
-    val correct: EChoice,
+    val correct: List<EChoice>,
     val choiceA: Choice,
     val choiceB: Choice,
     val choiceC: Choice,

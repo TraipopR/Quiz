@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.children
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.activityViewModels
@@ -93,6 +94,8 @@ class SegmentFragment : Fragment() {
             chip.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked)
                     model.setAnswer(index, segment!!)
+                if (segment!! + 1 >= segmentCount && quizData.question.all { it.answer != null })
+                    Toast.makeText(activity, "ตอบคำถามครบทุกข้อแล้ว", Toast.LENGTH_SHORT).show()
             }
         }
 
